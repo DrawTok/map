@@ -32,7 +32,7 @@ class TSearchController extends GetxController {
     final headers = {
       'Content-Type': 'application/json',
     };
-    final queryParams = {'q': query.value, 'limit': '6', 'apiKey': apiKey};
+    final queryParams = {'q': query.value, 'limit': '10', 'apiKey': apiKey};
     var response =
         await apiClient.getData('geocode', headers, query: queryParams);
 
