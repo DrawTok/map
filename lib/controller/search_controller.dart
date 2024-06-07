@@ -67,15 +67,16 @@ class TSearchController extends GetxController {
     return await Geolocator.getCurrentPosition();
   }
 
+
+
   Future<void> navigateToAddress(int index) async {
     try {
       Position position = await _getCurrentLocation();
       Address address = searchList[index];
 
-      final Uri googleMapsUrl =
-          Uri.parse('https://www.google.com/maps/dir/?api=1&destination='
-              '${address.position.lat},${address.position.lng}'
-              '&origin=${position.latitude},${position.longitude}');
+      final Uri googleMapsUrl = Uri.parse(
+          'https://www.google.com/maps/dir/?api=1&destination='
+          '${address.position.lat},${address.position.lng} &origin=${position.latitude},${position.longitude}');
       if (await canLaunchUrl(googleMapsUrl)) {
         await launchUrl(googleMapsUrl);
       } else {

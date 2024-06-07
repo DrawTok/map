@@ -46,7 +46,7 @@ class SearchBox extends GetView<TSearchController> {
           Icon(
             icon,
             color: Colors.black,
-            size: 16,
+            size: 24,
           ),
           const SizedBox(width: 16),
           Expanded(
@@ -64,7 +64,7 @@ class SearchBox extends GetView<TSearchController> {
                   const OutlineInputBorder(borderSide: BorderSide.none),
                   suffixIcon: controller.query.value.isNotEmpty
                       ? IconButton(
-                    icon: const Icon(Icons.clear, size: 16),
+                    icon: const Icon(Icons.clear, size: 24),
                     onPressed: () {
                       textController.clear();
                       controller.updateQuery('');
